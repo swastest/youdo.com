@@ -34,7 +34,7 @@ public class AuthTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Негативная проверка логина(пользователь не указал e-mail)")
+    @DisplayName("Негативная проверка логина(пользователь не указал login)")
     void negativeTestWithoutLogin() {
         mp.openMainPage()
                 .clickLoginButton();
