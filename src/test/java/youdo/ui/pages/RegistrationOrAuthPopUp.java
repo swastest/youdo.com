@@ -15,7 +15,7 @@ public class RegistrationOrAuthPopUp {
             registrTub = $(".Tabs_item__2qscM", 0),
             authTub = $(".Tabs_item__2qscM", 1),
             registrNaimPopUp = $(".SignInModal_socialTitle__1H72B"),
-            errorMessageElement = $(".Tooltip_tooltip__2kgez ");
+            errorMessageElement = $(".Tooltip_tooltip__2kgez");
 
     //actions
     @Step("Ввести e-mail")
@@ -45,6 +45,12 @@ public class RegistrationOrAuthPopUp {
     @Step("Проверка: сообщение о некорректном e-mail соответствует тексту 'Неправильный Email адрес'")
     public RegistrationOrAuthPopUp checkErrorEmailMessage() {
         errorMessageElement.shouldHave(text("Неправильный Email адрес"));
+        return this;
+    }
+
+    @Step("Проверка: сообщение о неудачном логине соответствует тексту 'Неверный логин/пароль'")
+    public RegistrationOrAuthPopUp checkErrorLoginMessage() {
+        errorMessageElement.shouldHave(text("Неверный логин/пароль"));
         return this;
     }
 
