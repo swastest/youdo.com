@@ -13,7 +13,7 @@ public class MainPage {
     taskButton = $("href='/tasks/new'");
 
     //actions
-    @Step("Открыть страницу авторизации")
+    @Step("Открыть главную страницу")
     public MainPage openMainPage() {
         open("");
         return this;
